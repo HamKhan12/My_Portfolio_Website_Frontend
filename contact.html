@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Footer Styles (Contact Page Only) */
+        footer {
+            background-color: var(--darker-color);
+            padding: 50px 0 20px;
+            border-top: 1px solid rgba(0, 170, 255, 0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .social-links {
+            text-align: center;
+        }
+
+        .social-links h3 {
+            color: var(--light-color);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 170, 255, 0.1);
+            color: var(--primary-color);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            pointer-events: auto !important; /* Force enable clicks */
+            z-index: 11;
+        }
+
+        .social-icon::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Red tint for debugging */
+            z-index: 12;
+        }
+
+        .social-icon:hover {
+            background: var(--primary-color);
+            color: var(--dark-color);
+            transform: translateY(-3px);
+            box-shadow: var(--neon-glow);
+        }
+
+        .copyright {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100vw;
+            padding: 20px 0;
+        }
+
+        /* Responsive Footer (Contact Page Only) */
+        @media (max-width: 768px) {
+            .social-icons {
+                gap: 15px;
+            }
+            
+            .social-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo">My<span>Portfolio</span></div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/about.html" class="nav-link">About</a></li>
+                    <li><a href="/projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="/contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-page">
+            <div class="container">
+                <h1 class="page-title">Get In <span>Touch</span></h1>
+                
+                <div class="contact-container">
+                    <div class="contact-methods">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email Me</h3>
+                            <p>Ham2023iiui@gmail.com</p>
+                            <a href="https://mail.google.com/" class="contact-btn">Send Email</a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3>Call Me</h3>
+                            <p>+92 332 9697 491</p>
+                            <a href="https://globfone.com/call-phone/" class="contact-btn">Call Now</a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Location</h3>
+                            <p>Rawalpindi, Islamabad, Pakistan</p>
+                            <a href="https://maps.google.com/?q=Rawalpindi,Islamabad,Pakistan" target="_blank" class="contact-btn">View Map</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <h2>Send Me a Message</h2>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Subject">
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="social-links">
+                <h3>Connect With Me</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/hamna-anwar-4b63b9268" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/HamKhan12" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/i/flow/login" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://dribbble.com/session/new" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
